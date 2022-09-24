@@ -1,0 +1,7 @@
+args = ["start", "alex192"]
+black_list = ["1221", "121221"]
+match args:
+    case ["start", nickname] if nickname not in black_list:
+        print(f"Пользователь: {nickname}")
+    case _:
+        print(f"Пользователь {args[1]} заблокирован")
