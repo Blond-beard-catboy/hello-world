@@ -1,0 +1,9 @@
+#l = [1, 2, 3]
+#a = l * 5
+# print(a)
+#b = 5 * 'abcd'
+#print(b)
+board = [['_'] * 3 for i in range(3)]
+#print(board)
+board[1][2] = 'X'
+print(board)
