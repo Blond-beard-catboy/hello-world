@@ -1,0 +1,9 @@
+import requests
+
+#url = 'https://httpbin.org/get'
+url = 'https://www.youtube.com/results'
+query = {'search_query':'#your_words#'}
+response = requests.get(url,params=query)
+
+print(response.status_code,'status_code')
+print(response.url, 'url')
