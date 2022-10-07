@@ -1,0 +1,14 @@
+import requests
+
+response = requests.get("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=23fafd2fd1d7d59e39e06a95d4666376").json()  #params = params
+#print(response)
+
+a1 = response['list']
+a2 = a1[0]
+a3 = a2['main']
+a4 = a3['temp']
+print('Temperature in Kelvin: ', a4 )
+
+# T = t(c) + T0 where T0 = 273.15 and t(c) = cilcius temperature
+temp = a4 - 273.15
+print('%.2f' % temp)
