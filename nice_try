@@ -10,14 +10,13 @@ headers = {
     "X-Amzn-Trace-Id": "Root=1-6342c48c-5a56ab63724e906863f6034b"
   }
 
-data = {"custname": "okipullup",
-        "custtel": "293764723",
-        "custemail": "sidbnfui@mail.ru",
+data = {"custname": "login",
+        "custtel": "phone_number",
+        "custemail": "email-adress",
         "size": "medium",
         "topping": "bacon",
         "delivery": "",
         "comments": ""}
 response = requests.post("http://httpbin.org/post", headers=headers, data=data)
-#print(response.text)
 x = response.json()
 print(x['form']['custname'])
