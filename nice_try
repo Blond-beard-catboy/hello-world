@@ -1,0 +1,23 @@
+import requests
+
+headers = {
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Host": "httpbin.org",
+    "Referer": "http://httpbin.org/",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-6342c48c-5a56ab63724e906863f6034b"
+  }
+
+data = {"custname": "okipullup",
+        "custtel": "293764723",
+        "custemail": "sidbnfui@mail.ru",
+        "size": "medium",
+        "topping": "bacon",
+        "delivery": "",
+        "comments": ""}
+response = requests.post("http://httpbin.org/post", headers=headers, data=data)
+#print(response.text)
+x = response.json()
+print(x['form']['custname'])
